@@ -7,7 +7,7 @@ FlatSite
 * `FlatSite->Indexer` generates `FlatSite.json` based on `/data/content/pages/*` 
 * `FlatSite->register_hook($module, $event, $function)`
 * `FlatSite->Installer`
-* Importer (from Wordpress)
+* `FlatSite->Importer` (from Wordpress)
 * Login with Google/Yahoo/Twitter/Facebook in admin
 * Comments based on Disqus
 * Offline mode
