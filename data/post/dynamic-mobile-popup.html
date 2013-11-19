@@ -1,0 +1,24 @@
+<p>I'm using jQuery mobile to build dynamic mobile web applications. I ran into a pretty basic problem involving alerting to the user when he is doing something wrong or right.</p>
+
+<p>When a mobile user fills a form and submits it, the submission is handled via AJAX, if the response contains an error, the user has to be notified somehow.</p>
+
+<p>Say he added a malformed email address or there is a missing mandatory field. You can notify him inline, with a message next to or above the field, or through a popup.</p>
+
+<p>What are the alert choices on mobile?</p>
+
+<ul>
+	<li>alert() - in a web application this will show the URL of the app, not really professional.</li>
+	<li>navigator.notification.alert() when your web application is inside PhoneGAP</li>
+	<li>jQM Simpledialog2 - http://dev.jtsage.com/jQM-SimpleDialog/demos2/ - I am using this on some of the web applications.</li>
+	<li>popup() function that is available from jQuery Mobile 1.2</li>
+</ul>
+
+<p>In one of my last web applications made with jQuery mobile, I used the <b>.popup()</b> method, but it seems to me that it lacks from dynamic usage. I don't want to manually create the popup's content in the HTML code, I want to use the popup function as it my popup is anonymous, I don't care where it's located in the HTML source, I just want my message to be displayed on whatever page I am or whatever form I submit, etc.</p>
+
+<p><a href="https://github.com/serbanghita/jQM-dynamic-popup" target="_blank"><img src="http://ghita.org/sites/all/themes/framework/images/icons/download.png" /> Download latest</a> | <a href="https://github.com/serbanghita/jQM-dynamic-popup" target="_blank"><img src="http://ghita.org/sites/all/themes/framework/images/icons/demo.gif" /> Demo &amp; Code</a></p>
+
+<p><b>References</b></p>
+<ul>
+<li><a href="http://stackoverflow.com/questions/9999658/what-is-a-standard-way-to-display-errors-in-jquery-mobile">What is a standard way to display errors in jQuery Mobile</a></li>
+<li><a href="http://jquerymobile.com/demos/1.2.0-alpha.1/docs/pages/popup/index.html">jQuery 1.2 mobile popup()</a></li>
+</ul>

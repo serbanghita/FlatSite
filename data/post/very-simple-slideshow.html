@@ -1,0 +1,56 @@
+<p>There are a lot of slideshows scripts out there and many of them are very useful. This is my attempt to create a jQuery slideshow as small (light) as possible with the following properties:</p>
+<ul>
+ <li>respect the jQuery plugin standards</li>
+ <li>keep compressed plugin as small as possible (&lt;1.2kb)</li>
+ <li>don't use any CSS but support them</li>
+ <li>depend only on jQuery (not UI), compatible with 1.2 and above</li>
+ <li>make sure it works for every browser (works in IE6)
+</ul>
+
+<p><a href="https://gitorious.org/jquery-very-simple-slideshow/jquery-very-simple-slideshow/trees/master" target="_blank"><img src="/sites/all/themes/framework/images/icons/download.png" /> Download (1.19 KB)</a> | <a href="/ux/slideshow/demo/demo.html" target="_blank"><img src="/sites/all/themes/framework/images/icons/demo.gif" /> Demo</a></p>
+
+
+<p><b>Usage</b></p>
+
+<p>Here is an example of a slideshow only with images. Note that the slides must be wrap in a &lt;div&gt element.</p>
+
+<textarea>
+<div id="MyPictures">
+    <div><img src="slide1.jpg" title="Picture One" /></div>
+    <div><img src="slide2.jpg" title="Picture Two" /></div>
+    <div><img src="slide3.jpg" title="Picture Three" /></div>
+</div>
+</textarea>
+
+<p>Call one line of JavaScript code:</p>
+
+<textarea>
+$('#MyPictures').VerySimpleSlideshow({interval:3000});
+</textarea>
+
+<p>Check out the source code on the demo for <a href="/ux/slideshow/demo/demo.html">more slideshows examples</a>.</p>
+
+<p><b>Wiki</b></p>
+
+<p>What if I want to use CSS?</p>
+<p>This is the very basic CSS framework of a slideshow:</p>
+
+<textarea>
+<style type="text/css">
+    .VeryEasySlideshow { position:relative; }
+    .VeryEasySlideshow .slide { position: absolute; opacity:0; z-index:9; }
+    .VeryEasySlideshow .slide.active { opacity:1; z-index: 11; }
+    .VeryEasySlideshow .slide.last-active { z-index: 10; }
+</style>
+</textarea>
+
+<p>Where can i contribute?</p>
+<p>On <a href="https://gitorious.org/jquery-very-simple-slideshow">Gitorious</a>. Keep in mind that the code has to be as smaller and compact as possible.</p>
+
+<p><b>References:</b></p>
+
+<ol>
+<li><a href="http://stackoverflow.com/questions/6488958/jquery-slideshow-when-youre-in-another-browser-tab-for-a-bit-then-go-back-to">jquery: slideshow, when you're in another browser tab for a bit, then go back to the tab with the slideshow, it flips out</a></li>
+<li><a href="http://stackoverflow.com/questions/7684330/slideshow-goes-crazy-if-you-tab-away">slideshow goes crazy if you tab away</a></li>
+<li><a href="http://alexsexton.com/?p=51">Using Inheritance Patterns to Organize Large jQuery Applications</a></li>
+</ol>

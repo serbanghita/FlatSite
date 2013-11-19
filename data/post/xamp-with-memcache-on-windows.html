@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>XAMPP and Memcache on Windows</title>
+	<meta name="description" content="Learn how to install memcache on XAMPP portable on Windows with PHP 5.4">
+	<meta name="keywords" content="">
+	<meta name="author" content="Serban Ghita">
+	<meta name="categories" content="Tip of the day, PHP">
+	<meta name="published" content="2012-10-01">
+	<meta name="URL" content="tipoftheday/xamp-with-memcache-on-windows">
+	<meta name="altURL" content="">
+	<meta name="status" content="enabled">
+</head>
+
+<body>
+
+<p>I've downloaded <a href="http://www.apachefriends.org/en/xampp-windows.html#646">XAMPP Portable Lite</a> because I want to replace my old <a href="http://www.wampserver.com/en/">WAMP</a> server.</p>
+
+<p>After some basic configuration I've started the webserver on the website I'm working on and I've got a <strong>memcache</strong> module related error:</p>
+
+<textarea>
+[01-Oct-2012 07:59:12 UTC] PHP Fatal error:  Class 'Memcache' not found in E:\webserver\htdocs\whatever.class.php on line 18
+</textarea>
+
+<p>Note: if you already have an older version of php_memcache.dll you might get the following error:</p>
+
+<textarea>
+[01-Oct-2012 08:12:15 UTC] PHP Warning:  PHP Startup: memcache: Unable to initialize module
+Module compiled with module API=20090626
+PHP    compiled with module API=20100525
+These options need to match in Unknown on line 0
+</textarea>
+
+<p>Back to my case, there was no <strong>php_memcache.dll</strong> in <em>E:\webserver\php\ext</em> directory, which is pretty sad from XAMPP, and I started searching it on the web. I found a great article about <a href="http://www.leonardaustin.com/technical/how-to-install-memcached-on-xampp-on-windows-7">installing memcached on XAMPP</a> and I just want to add a few things to it:</p>
+
+<ol>
+	<li>Locate you working php.ini (you can always check the correct path by looking at the phpinfo())</li>
+	<li>Make all the configs from the article above.</li>
+	<li>Download <strong>php_memcache.dll</strong> from <a href="http://windows.php.net/downloads/pecl/snaps/memcache/3.0.6/">http://windows.php.net/downloads/pecl/snaps/memcache/3.0.6/</a>. For me <em>php_memcache-3.0.6-5.4-ts-vc9-x86.zip</em> worked, because I'm using <strong>PHP 5.4</strong>. Put it in <em>\php\ext</em></li>
+<ol>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<p>I'm working on this blog on a local computer at home. I usualy modify the design and activate couple of modules to see how they perform before putting them live. Every day i am using a fresh MySQL&nbsp;database dump from my hosting provider GoDaddy, because i want to make sure i'm working with the latest data possible.</p><p>Localy my Drupal is configured to work without any optimizations.</p><p>However, on the remote production server i have it configured with the following 'Performance' options at <em>admin/settings/performance</em>:</p><ul><li>Caching mode:&nbsp;<strong>Normal</strong></li><li>Page compression: <strong>Enabled</strong></li><li>Block cache:&nbsp;<strong>Enabled</strong></li><li>Optimize CSS files:&nbsp;<strong>Enabled</strong></li><li>Optimize JavaScript files:&nbsp;<strong>Enabled</strong></li></ul><p>What happened is that i dumped the live database on my local server and i got '<em><strong>The connection was reset</strong></em>' in my browser when accessing http://ghita.org.local/</p><p>How to solve the problem</p><p>I used phpMyAdmin to browse to my database. Locate the `variable` table, then look for the following variable names: cache, page_compression, block_cache, preprocess_css, preprocess_js and reset them:</p>
+
+<textarea>
+#reset the cache configuration
+UPDATE `variable` SET `value` = 's:0:&quot;&quot;;' WHERE `name` = 'cache' LIMIT 1;
+UPDATE `variable` SET `value` = 's:0:&quot;&quot;;' WHERE `name` = 'page_compression' LIMIT 1;
+UPDATE `variable` SET `value` = 's:0:&quot;&quot;;' WHERE `name` = 'block_cache' LIMIT 1;
+UPDATE `variable` SET `value` = 's:0:&quot;&quot;;' WHERE `name` = 'preprocess_css' LIMIT 1;
+UPDATE `variable` SET `value` = 's:0:&quot;&quot;;' WHERE `name` = 'preprocess_js' LIMIT 1;
+
+#empty the cache tables (main ones)
+TRUNCATE `cache`;
+TRUNCATE `cache_block`;
+TRUNCATE `cache_content`;
+</textarea>
+
+<p>After issuing this commands my local site started working.</p>
