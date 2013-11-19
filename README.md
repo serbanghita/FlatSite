@@ -15,3 +15,7 @@ FlatSite
 * Offline mode
 * AJAX search in pages
 * Addons repo?
+   * Forms
+   * Mobile detect
+   * Social
+   * Comments
