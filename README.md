@@ -3,6 +3,8 @@ FlatSite
 
 > Build fast, deploy easy, enjoy your website in minutes.
 
+* Create abstract API
+* Create one hook demo
 * `/data/content/` should contain only static or temporary generated content.
 * `FlatSite->Indexer` generates `FlatSite.json` based on `/data/content/pages/*` 
 * `FlatSite->register_hook($module, $event, $function)`
