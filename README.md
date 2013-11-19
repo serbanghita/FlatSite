@@ -1,4 +1,12 @@
 FlatSite
 ========
 
-Build flat and fast websites.
+> Build fast, deploy easy, enjoy your website in minutes.
+
+* `/data/content/` should contain only static or temporary generated content.
+* `FlatSite->Indexer` generates `FlatSite.json` based on `/data/content/pages/*` 
+* `FlatSite->register_hook($module, $event, $function)`
+* Installer
+* Importer (from Wordpress)
+* Login with Google/Yahoo/Twitter/Facebook in admin
+* Comments based on Disqus
