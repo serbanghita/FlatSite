@@ -19,3 +19,9 @@ FlatSite
    * Mobile detect
    * Social
    * Comments
+   * Minify
+   * Microdata
+
+##### Other projects
+
+* https://github.com/rstacruz/flatdoc
