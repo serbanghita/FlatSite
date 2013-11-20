@@ -3,13 +3,10 @@ FlatSite
 
 > Build fast, deploy easy, enjoy your website in minutes.
 
-* Create abstract API
-* Create one hook demo
-* `/data/content/` should contain only static or temporary generated content.
-* `FlatSite->Indexer` generates `FlatSite.json` based on `/data/content/pages/*` 
-* `FlatSite->register_hook($module, $event, $function)`
-* `FlatSite->Installer`
-* `FlatSite->Importer` (from Wordpress)
+* ~~Create abstract API~~
+* ~~Create file & directory structure~~
+* Define page HTML standards.
+* Format all `/data/content/pages/` according to standards.
 * Login with Google/Yahoo/Twitter/Facebook in admin
 * Comments based on Disqus
 * Offline mode
