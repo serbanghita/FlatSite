@@ -1,4 +1,4 @@
 <?php
-require_once 'WebSite.class.php';
-$website = new WebSite;
+require_once 'data/lib/FlatSite.class.php';
+$website = new FlatSite;
 $website->run();
