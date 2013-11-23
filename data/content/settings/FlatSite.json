@@ -1,0 +1,16 @@
+{
+	"pages": [
+		{
+			"pageType": "post",
+			"title": "XAMPP and Memcache on Windows",
+			"subtitle": "Install memcache on XAMPP portable with PHP 5.4",
+			"description": "",
+			"bodyFileName": "xamp-with-memcache-on-windows.html",
+			"URL": "tipoftheday/xamp-with-memcache-on-windows",
+			"altURLs": [],
+			"publishedDate": "2012-10-01",
+			"categories": ["Tip of the day", "PHP"],
+			"language": "en"
+		}
+	]
+}
