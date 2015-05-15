@@ -1,0 +1,19 @@
+{
+  "title": "Serban Ghita - Software Developer",
+  "subtitle": "Current interests: Start-ups, JavaScript, HTML5 games, websockets, mobile web, soundtracks.",
+  "avatar": {
+    "96x96": "",
+    "250x250": ""
+  },
+  "url": "http://serban.ghita.org",
+  "email": "serbanghita@gmail.com",
+  "copyright": "Copyright 2007 - 2015 © Serban Ghita",
+  "disquss": "serbanghita",
+  "twitter": "serbanghita",
+  "facebook": null,
+  "youtube": null,
+  "posts": {
+    "engine": "html"
+  },
+  "theme": "default"
+}
