@@ -26,7 +26,7 @@ example/private/posts/
 
 3. Each `post` must be proper HTML formatted.
 
-```
+```html
 <h1 class="post-title">Title</h1>
 <div class="post-date">2015-05-15 19:00</div>
 
