@@ -6,7 +6,7 @@ FlatSite
 If your website is based around _posts_ and _tags_, and you want to make it database free
 so you can be able to host it anywhere (including GitHub), here is the solution.
 
-1. Configure your website using the `private` folder.
+Configure your website using the `private` folder.
 
 ```
 example/private/
@@ -15,7 +15,7 @@ example/private/
             config.json
 ```
 
-2. Add your posts in the `private/posts/` folder.
+Add your posts in the `private/posts/` folder.
 
 ```
 example/private/posts/
@@ -24,7 +24,7 @@ example/private/posts/
     ...
 ```
 
-3. Each `post` must be proper HTML formatted.
+Each `post` must be proper HTML formatted.
 
 ```html
 <h1 class="post-title">Title</h1>
@@ -37,6 +37,6 @@ example/private/posts/
 <div class="post-tags">php, programming</div>
 ```
 
-4. Generate it using `lib/app.php`
+Generate it using `lib/app.php`
 
-5. Check the `example/public/`. This folder will contain all your website pages and assets.
+Check the `example/public/`. This folder will contain all your website pages and assets.
