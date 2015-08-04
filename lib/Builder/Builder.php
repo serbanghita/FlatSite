@@ -55,7 +55,7 @@ class Builder implements BuilderInterface
 
             $className = "post-body";
             $nodes = $finder->query("//*[contains(@class, '$className')]");
-            $post->setBody($nodes->item(0)->nodeValue);
+            $post->setBody($nodes->item(0)->ownerDocument->saveHTML($nodes->item(0)));
 
             $className = "post-tags";
             $nodes = $finder->query("//*[contains(@class, '$className')]");
